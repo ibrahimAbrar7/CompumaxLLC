@@ -3,6 +3,14 @@
 @tailwind utilities;
 @import "swiper/css";
 
+html {
+  --background-light: #ffffff;
+  --background-dark: #1a202c;
+
+  --text-light: #1a202c;
+  --text-dark: #ffffff;
+}
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;

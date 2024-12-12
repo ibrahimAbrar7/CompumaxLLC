@@ -8,31 +8,31 @@ import { Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="pt-10 border-t">
+    <footer className="pt-10 border-t dark:bg-slate-950">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* About Section */}
           <div>
-            <h2 className="text-xl font-bold uppercase mb-4 text-[#101a54]">About</h2>
-            <p className="text-blue-600 hover:text-pink-600 mb-4">
+            <h2 className="text-xl font-bold uppercase mb-4 text-[#101a54] dark:text-gray-300">About</h2>
+            <p className="text-blue-600 hover:text-pink-600 mb-4 dark:text-gray-400">
               Comp-U-Max is an independent Web and software development company which specializes in business applications.
             </p>
             <div className="flex space-x-4">
               <Link
                 href="#"
-                className="text-white bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition-colors"
+                className="text-white bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition-colors dark:bg-gray-400 dark:text-blue-700"
               >
                 <FaFacebookF />
               </Link>
               <Link
                 href="#"
-                className="text-white bg-black p-2 rounded-full hover:bg-blue-500 transition-colors"
+                className="text-white bg-black p-2 rounded-full hover:bg-blue-500 transition-colors dark:bg-gray-400 dark:text-gray-900"
               >
                 <FaXTwitter />
               </Link>
               <Link
                 href="#"
-                className="text-white bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors"
+                className="text-white bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors dark:bg-gray-400 dark:text-red-800"
               >
                 <FaYoutube />
               </Link>
@@ -41,35 +41,35 @@ const Footer: React.FC = () => {
 
           {/* Links Section */}
           <div>
-            <h2 className="text-xl font-bold uppercase mb-4 text-[#101a54]">Services</h2>
+            <h2 className="text-xl font-bold uppercase mb-4 text-[#101a54] dark:text-gray-300">Services</h2>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <FaAngleRight className="text-pink-600 mr-2" />
-                <Link href="#" className="text-pink-600 hover:text-blue-600">
+                <Link href="#" className="text-pink-600 hover:text-blue-600 dark:text-gray-400">
                   SEO Services
                 </Link>
               </li>
               <li className="flex items-center">
                 <FaAngleRight className="text-pink-600 mr-2" />
-                <Link href="#" className="text-pink-600 hover:text-blue-600">
+                <Link href="#" className="text-pink-600 hover:text-blue-600 dark:text-gray-400">
                   Website Development
                 </Link>
               </li>
               <li className="flex items-center">
                 <FaAngleRight className="text-pink-600 mr-2" />
-                <Link href="#" className="text-pink-600 hover:text-blue-600">
+                <Link href="#" className="text-pink-600 hover:text-blue-600 dark:text-gray-400">
                   UI/UX Design Services 
                 </Link>
               </li>
               <li className="flex items-center">
                 <FaAngleRight className="text-pink-600 mr-2" />
-                <Link href="#" className="text-pink-600 hover:text-blue-600">
+                <Link href="#" className="text-pink-600 hover:text-blue-600 dark:text-gray-400">
                   Software Development
                 </Link>
               </li>
               <li className="flex items-center">
                 <FaAngleRight className="text-pink-600 mr-2" />
-                <Link href="#" className="text-pink-600 hover:text-blue-600">
+                <Link href="#" className="text-pink-600 hover:text-blue-600 dark:text-gray-400">
                 Data Analysis & Visualization
                 </Link>
               </li>
@@ -78,35 +78,35 @@ const Footer: React.FC = () => {
 
           {/* Services Section */}
           <div>
-            <h2 className="text-xl font-bold uppercase mb-4 text-[#101a54]">Quick Links</h2>
+            <h2 className="text-xl font-bold uppercase mb-4 text-[#101a54] dark:text-gray-300">Quick Links</h2>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <FaAngleRight className="text-blue-600 mr-2" />
-                <Link href="/" className="text-blue-600 hover:text-pink-600">
+                <Link href="/" className="text-blue-600 dark:text-gray-400 hover:text-pink-600">
                   Home
                 </Link>
               </li>
               <li className="flex items-center">
                 <FaAngleRight className="text-blue-600 mr-2" />
-                <Link href="/about" className="text-blue-600 hover:text-pink-600">
+                <Link href="/about" className="text-blue-600 dark:text-gray-400 hover:text-pink-600">
                   About
                 </Link>
               </li>
               <li className="flex items-center">
                 <FaAngleRight className="text-blue-600 mr-2" />
-                <Link href="/services" className="text-blue-600 hover:text-pink-600">
+                <Link href="/services" className="text-blue-600 dark:text-gray-400 hover:text-pink-600">
                   Services
                 </Link>
               </li>
               <li className="flex items-center">
                 <FaAngleRight className="text-blue-600 mr-2" />
-                <Link href="/portfolio" className="text-blue-600 hover:text-pink-600">
+                <Link href="/portfolio" className="text-blue-600 dark:text-gray-400 hover:text-pink-600">
                   Portfolio
                 </Link>
               </li>
               <li className="flex items-center">
                 <FaAngleRight className="text-blue-600 mr-2" />
-                <Link href="/contact" className="text-blue-600 hover:text-pink-600">
+                <Link href="/contact" className="text-blue-600 dark:text-gray-400 hover:text-pink-600">
                   Contact
                 </Link>
               </li>
@@ -115,29 +115,29 @@ const Footer: React.FC = () => {
 
           {/* Call Us & Visit Us Section */}
           <div>
-            <h2 className="text-xl font-bold uppercase mb-4 text-[#101a54]">Contact</h2>
+            <h2 className="text-xl font-bold uppercase mb-4 text-[#101a54] dark:text-gray-300">Contact</h2>
             <Link
               href="tel:9949592380"
-              className="text-pink-600 hover:text-blue-600"
+              className="text-pink-600 dark:text-gray-400 hover:text-blue-600"
             >
               Call Us :
-              <p className="text-pink-600 mb-2"><Phone className="text-pink-600 text-xl inline mr-2" />
+              <p className="text-pink-600 dark:text-gray-400 mb-2"><Phone className="text-pink-600 dark:text-gray-400 text-xl inline mr-2" />
                 994-9592-380</p> </Link>
             <Link
               href="mailto:Info@compumax.co.in"
-              className="text-pink-600 hover:text-blue-600"
+              className="text-pink-600 dark:text-gray-400 hover:text-blue-600"
             > 
               Mail Us :
 
-              <p className="text-pink-600 mb-2"><FaEnvelope className="text-pink-600 text-xl inline mr-2" />
+              <p className="text-pink-600 dark:text-gray-400 mb-2"><FaEnvelope className="text-pink-600 dark:text-gray-400 text-xl inline mr-2" />
               Info@compumax.co.in</p> </Link>
             <Link
               href="mailto:example@mail.com"
-              className="text-pink-600 hover:text-blue-600"
+              className="text-pink-600 dark:text-gray-400 hover:text-blue-600"
             >
               Address :
             </Link>
-            <p className="text-pink-600 mb-2"><FaMapMarkerAlt className="text-pink-600 text-xl inline mr-2" />Lakdikapul, HYD, TS.</p>
+            <p className="text-pink-600 dark:text-gray-400 mb-2"><FaMapMarkerAlt className="text-pink-600 dark:text-gray-400 text-xl inline mr-2" />Lakdikapul, HYD, TS.</p>
           </div>
         </div>
       </div>

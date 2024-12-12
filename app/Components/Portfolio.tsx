@@ -33,8 +33,8 @@ const Portfolio = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="container mx-auto px-4 sm:px-8 lg:px-16 py-10 bg-gray-50">
-      <h1 className="text-3xl font-bold text-center text-[#101a54] dark:text-white mb-12">
+    <div className="container mx-auto px-4 sm:px-8 lg:px-16 py-10 bg-gray-50 dark:bg-slate-950 overflow-hidden ">
+      <h1 className="text-3xl font-bold text-center text-[#101a54] dark:text-gray-300 mb-12">
         Our Portfolio
       </h1>
 
@@ -47,7 +47,7 @@ const Portfolio = () => {
                 className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-4"
                 key={slide.id}
               >
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-300">
                   <Image
                     src={slide.path}
                     alt={slide.title}

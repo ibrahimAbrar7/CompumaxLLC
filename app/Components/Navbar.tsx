@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
 
   return (
     <nav
-      className={`transition-all duration-300 bg-[white] shadow-md ${
+      className={`transition-all duration-300 bg-white dark:bg-slate-950 shadow-md ${
         isScrolled ? "fixed top-0 left-0 w-full z-40" : "relative"
       }`}
     >
@@ -32,22 +32,29 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <Image
-              src="/cmaxlogo.png"
+          <Image
+              src="/cmaxlogo.png" // Light mode logo
               alt="Company Overview"
               width={210} // Set width (adjust as per your design)
               height={150} // Set height (adjust as per your design)
-              className="h-12"
+              className="h-12 dark:hidden" // Hide on dark mode
+            />
+            <Image
+              src="/cmaxlogodark.png" // Dark mode logo
+              alt="Company Overview"
+              width={210} // Set width (adjust as per your design)
+              height={150} // Set height (adjust as per your design)
+              className="h-12 hidden dark:block" // Show only in dark mode
             />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8 text-sm text-gray-1000 font-medium tracking-[0.4em] font-poppins">
+        <div className="hidden md:flex space-x-8 text-sm text-black font-medium tracking-[0.4em] font-poppins">
           <Link
             href="/"
             className={`${
-              isActive("/") ? "text-blue-600" : "hover:text-blue-600"
+              isActive("/") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
             } transition-colors duration-200`}
           >
             HOME
@@ -55,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <Link
             href="/about"
             className={`${
-              isActive("/about") ? "text-blue-600" : "hover:text-blue-600"
+              isActive("/about") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
             } transition-colors duration-200`}
           >
             ABOUT
@@ -63,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <Link
             href="/services"
             className={`${
-              isActive("/services") ? "text-blue-600" : "hover:text-blue-600"
+              isActive("/services") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
             } transition-colors duration-200`}
           >
             SERVICES
@@ -71,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <Link
             href="/portfolio"
             className={`${
-              isActive("/portfolio") ? "text-blue-600" : "hover:text-blue-600"
+              isActive("/portfolio") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
             } transition-colors duration-200`}
           >
             PORTFOLIO
@@ -79,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <Link
             href="/contact"
             className={`${
-              isActive("/contact") ? "text-blue-600" : "hover:text-blue-600"
+              isActive("/contact") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
             } transition-colors duration-200`}
           >
             CONTACT
@@ -92,18 +99,18 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
-          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 dark:text-white" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-md">
+        <div className="md:hidden bg-white dark:bg-slate-950 shadow-md">
           <div className="flex flex-col space-y-4 p-4 font-medium tracking-[0.4em] font-poppins">
             <Link
               href="/"
               className={`${
-                isActive("/") ? "text-blue-600" : "hover:text-blue-600"
+                isActive("/") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
               } transition-colors duration-200`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -112,7 +119,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             <Link
               href="/about"
               className={`${
-                isActive("/about") ? "text-blue-600" : "hover:text-blue-600"
+                isActive("/about") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
               } transition-colors duration-200`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -121,7 +128,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             <Link
               href="/services"
               className={`${
-                isActive("/services") ? "text-blue-600" : "hover:text-blue-600"
+                isActive("/services") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
               } transition-colors duration-200`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -130,7 +137,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             <Link
               href="/portfolio"
               className={`${
-                isActive("/portfolio") ? "text-blue-600" : "hover:text-blue-600"
+                isActive("/portfolio") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
               } transition-colors duration-200`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -139,7 +146,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             <Link
               href="/contact"
               className={`${
-                isActive("/contact") ? "text-blue-600" : "hover:text-blue-600"
+                isActive("/contact") ? "text-blue-600 dark:text-white" : "hover:text-blue-600 dark:text-white"
               } transition-colors duration-200`}
               onClick={() => setIsMenuOpen(false)}
             >
