@@ -19,7 +19,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
-              <span><Link href="mailto:Info@compumax.co.in">Info@compumax.co.in</Link></span>
+              <span><Link href="mailto:wassay@compumax.co.in">wassay@compumax.co.in</Link></span>
             </div>
           </div>
 

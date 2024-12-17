@@ -124,13 +124,13 @@ const Footer: React.FC = () => {
               <p className="text-pink-600 dark:text-gray-400 mb-2"><Phone className="text-pink-600 dark:text-gray-400 text-xl inline mr-2" />
                 994-9592-380</p> </Link>
             <Link
-              href="mailto:Info@compumax.co.in"
+              href="mailto:wassay@compumax.co.in"
               className="text-pink-600 dark:text-gray-400 hover:text-blue-600"
             > 
               Mail Us :
 
               <p className="text-pink-600 dark:text-gray-400 mb-2"><FaEnvelope className="text-pink-600 dark:text-gray-400 text-xl inline mr-2" />
-              Info@compumax.co.in</p> </Link>
+              wassay@compumax.co.in</p> </Link>
             <Link
               href="mailto:example@mail.com"
               className="text-pink-600 dark:text-gray-400 hover:text-blue-600"

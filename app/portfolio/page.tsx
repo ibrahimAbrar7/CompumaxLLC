@@ -1,37 +1,65 @@
 "use client";
 
-import Footer from "../Components/Footer";
+import React, { useState, useEffect } from "react";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 import Portfolio from "../Components/Portfolio";
-import React, { useEffect, useState } from "react";
+import Footer from "../Components/Footer";
+import BackToTop from "../Components/BackToTop";
+import { ThemeProvider } from "next-themes";
+import ThemeToggle from "../Components/ThemeToggle"; // Assuming this is the path to your ThemeToggle component
 
-const Page: React.FC = () => {
+const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false); // Track if the component has mounted
 
+  // Detect scroll event
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100); // Set scrolled state based on window scroll position
+      if (window.scrollY > 100) {
+        setIsScrolled(true); // User has scrolled down
+      } else {
+        setIsScrolled(false); // User is at the top
+      }
     };
 
-    // Attach scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up event listener on unmount
+    // Set mounted to true after the component is mounted on the client
+    setMounted(true);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <>
-      {/* Header */}
-      <Header />
+  if (!mounted) {
+    return null; // Prevent rendering on the server before hydration
+  }
 
-      {/* Navbar - Updates styling when scrolled */}
-      <Navbar isScrolled={isScrolled} />
-      <Portfolio />
-      <Footer />
-    </>
+  return (
+    <ThemeProvider attribute="class" defaultTheme="light">
+      <div className="relative min-h-screen">
+        {/* Header */}
+        <Header />
+        {/* Navbar */}
+        <Navbar isScrolled={isScrolled} />
+        
+        {/* Theme Toggle Button */}
+        <div className="absolute top-4 right-4">
+          <ThemeToggle />
+        </div>
+
+        {/* Main Content */}
+        <main>
+          <Portfolio />
+        </main>
+
+        {/* Footer */}
+        <Footer />
+        {/* Back To Top Button */}
+        <BackToTop />
+      </div>
+    </ThemeProvider>
   );
 };
 
-export default Page;
+export default Home;

@@ -35,16 +35,16 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <Image
               src="/cmaxlogo.png" // Light mode logo
               alt="Company Overview"
-              width={210} // Set width (adjust as per your design)
-              height={150} // Set height (adjust as per your design)
-              className="h-12 dark:hidden" // Hide on dark mode
+              width={250} // Set width (adjust as per your design)
+              height={190} // Set height (adjust as per your design)
+              className="h-16 dark:hidden" // Hide on dark mode
             />
             <Image
               src="/cmaxlogodark.png" // Dark mode logo
               alt="Company Overview"
-              width={210} // Set width (adjust as per your design)
-              height={150} // Set height (adjust as per your design)
-              className="h-12 hidden dark:block" // Show only in dark mode
+              width={250} // Set width (adjust as per your design)
+              height={190} // Set height (adjust as per your design)
+              className="h-16 hidden dark:block" // Show only in dark mode
             />
           </Link>
         </div>
